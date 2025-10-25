@@ -156,3 +156,29 @@ try:
     firebase_admin.get_app()
 except ValueError:
     firebase_admin.initialize_app(cred)
+
+
+# -------------------------
+# Media files
+# -------------------------
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# -------------------------
+# Firebase Credentials Path
+# -------------------------
+FIREBASE_CREDENTIALS_PATH = BASE_DIR / "CredencialesFirebase" / "asistenciaconreconocimiento-firebase-adminsdk.json"
+
+# -------------------------
+# OpenCV y Reconocimiento Facial
+# -------------------------
+MODEL_PATH = BASE_DIR / 'backend' / 'modeloLBPHReconocimientoOpencv.xml'
+DATA_PATH = BASE_DIR / 'Data'
+
+# Configuración de reconocimiento facial
+RECONOCIMIENTO_CONFIG = {
+    'duracion_reconocimiento': 3,
+    'confianza_threshold': 70,
+    'intervalo_captura': 0.1,
+    'num_fotos_registro': 100,
+}
